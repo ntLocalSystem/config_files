@@ -20,6 +20,7 @@ local langs = {
 return {
 	"nvim-treesitter/nvim-treesitter",
 	event = { "BufReadPre", "BufNewFile" },
+	branch = "master",
 	build = ":TSUpdate",
 	dependencies = {
 		"nvim-treesitter/nvim-treesitter-textobjects",
@@ -29,7 +30,8 @@ return {
 		local treesitter = require("nvim-treesitter.configs")
 
 		-- configure treesitter
-		treesitter.setup({ -- enable syntax highlighting
+		treesitter.setup(
+			{ -- enable syntax highlighting
 			highlight = {
 				enable = true,
 			},

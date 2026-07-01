@@ -34,7 +34,3 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
-
--- Standard plugin - pi_paren
--- Desc - Color match corresponding parenthesis
-vim.cmd("DoMatchParen")

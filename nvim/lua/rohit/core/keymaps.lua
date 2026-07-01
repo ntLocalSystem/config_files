@@ -108,7 +108,7 @@ vim.keymap.set("n", "<C-c>", ":nohl<CR>", { desc = "Clear search hl", silent = t
 
 -- Copies or Yank to system clipboard
 -- TODO: system clipboard == nvim clipboard
--- vim.keymap.set("n", "<leader>Y", [["+Y]], opts)
+vim.keymap.set("n", "<leader>Y", [["+Y]], opts)
 
 -- format without prettier using the built in
 vim.keymap.set("n", "<leader>fd", vim.lsp.buf.format)
@@ -117,4 +117,5 @@ vim.keymap.set("n", "<leader>fd", vim.lsp.buf.format)
 vim.keymap.set("n", "<leader>sq", ":/<C-r><C-w><CR>", { desc = "Literal search current word" })
 
 -- Switch to previous buffer
-vim.keymap.set("n", "<leader>p", ":b#<CR>", { desc = "Switch to previous buffer" })
+vim.keymap.set("n", "<leader>`", ":b#<CR>", { desc = "Switch to previous buffer" })
+

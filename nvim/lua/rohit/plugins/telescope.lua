@@ -64,8 +64,8 @@ local telescope_defaults = {
     -- config_key = value,
 	layout_strategy = 'horizontal',
 	layout_config = {
-		width = 0.8,
-		preview_width = 0.6,
+		width = 0.9,
+		preview_width = 0.4,
 	},
 	vimgrep_arguments = {
       "rg",
@@ -127,6 +127,14 @@ return {
 	config = function()
 		local telescope = require("telescope")
 		telescope.setup(telescope_defaults)
+		vim.keymap.set("n", "<leader>e", function()
+			telescope.extensions.file_browser.file_browser({
+				path="%:p:h",
+				hidden = true,
+				grouped = true,
+				previewer = true,
+			})
+		end, { desc = "File browser"})
 	end,
 	keys = keymaps
 }
