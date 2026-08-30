@@ -31,5 +31,7 @@ vim.api.nvim_create_autocmd("LSPAttach", {
 	vim.keymap.set("n", "grd", vim.lsp.buf.definition)
 	vim.keymap.set("n", "grD", vim.lsp.buf.declaration)
 
+	vim.lsp.inlay_hint.enable(true)
+
 	end,
 })
